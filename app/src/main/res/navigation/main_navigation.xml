@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation.xml"
+    app:startDestination="@id/menu_latest">
+
+    <fragment
+        android:id="@+id/menu_latest"
+        android:name="com.maxtayler.punk.latest.LatestFragment"
+        app:moduleName="feature_latest">
+        <action
+            android:id="@+id/action_latest_to_details"
+            app:destination="@id/menu_details">
+            <argument
+                android:name="beer_id"
+                app:argType="long" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/menu_bookmarks"
+        android:name="com.maxtayler.punk.bookmarks.BookmarksFragment"
+        app:moduleName="feature_bookmarks">
+        <action
+            android:id="@+id/action_bookmarks_to_details"
+            app:destination="@id/menu_details">
+            <argument
+                android:name="beer_id"
+                app:argType="long" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/menu_details"
+        android:name="com.maxtayler.punk.details.DetailsFragment"
+        app:moduleName="feature_details">
+        <argument
+            android:name="beer_id"
+            app:argType="long" />
+    </fragment>
+</navigation>

@@ -1,0 +1,27 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/rubik_bold</item>
+    </style>
+
+    <style name="TextAppearance.Regular" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/rubik</item>
+    </style>
+
+    <style name="TextAppearance.Bold" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/rubik_bold</item>
+    </style>
+
+    <!-- region collapsing toolbar -->
+    <style name="TextAppearance.CollapsingToolbar.Expanded" parent="TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="android:fontFamily">@font/rubik_bold</item>
+    </style>
+
+    <style name="TextAppearance.CollapsingToolbar.Collapsed" parent="TextAppearance.AppCompat.Title">
+        <item name="android:fontFamily">@font/rubik_bold</item>
+    </style>
+    <!-- endregion -->
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Punk API</string>
+    <string name="latest">Latest</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="title_feature_bookmarks">Bookmarks</string>
+    <string name="title_feature_details">Module Title</string>
+</resources>
