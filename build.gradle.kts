@@ -4,9 +4,9 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${DependencyVersions.KOTLIN}")
-        classpath("com.android.tools.build:gradle:3.5.2")
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.1.0")
+        classpath(BuildPlugins.kotlinGradlePlugin)
+        classpath(BuildPlugins.androidGradlePlugin)
+        classpath(BuildPlugins.safeArgsGradlePlugin)
     }
 }
 
