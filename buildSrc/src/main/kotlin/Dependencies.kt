@@ -1,14 +1,14 @@
-const val kotlinVersion = "1.3.50"
+const val KOTLIN_VERSION = "1.3.50"
 
 object BuildPlugins {
     object Versions {
-        const val androidBuildToolsVersion = "3.5.3"
-        const val safeArgsVersion = "2.1.0"
+        const val ANDROID_BUILD_TOOLS = "3.5.3"
+        const val SAFE_ARGS = "2.1.0"
     }
 
-    const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.androidBuildToolsVersion}"
-    const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
-    const val safeArgsGradlePlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.safeArgsVersion}"
+    const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.ANDROID_BUILD_TOOLS}"
+    const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VERSION"
+    const val safeArgsGradlePlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.SAFE_ARGS}"
 
     const val androidApplication = "com.android.application"
     const val androidLibrary = "com.android.library"
@@ -49,7 +49,7 @@ object Libraries {
         const val GROUPIE = "2.7.0"
     }
 
-    const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}"
+    const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${KOTLIN_VERSION}"
     const val kotlinCoroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.COROUTINES}"
     const val kotlinCoroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.COROUTINES}"
 
@@ -91,8 +91,8 @@ object Libraries {
 
 object TestLibraries {
     private object Versions {
-        const val junit4 = "4.13-beta-2"
+        const val JUNIT4 = "4.13-beta-2"
     }
 
-    const val junit4 = "junit:junit:${Versions.junit4}"
+    const val junit4 = "junit:junit:${Versions.JUNIT4}"
 }
