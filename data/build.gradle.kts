@@ -1,7 +1,7 @@
 plugins {
-    id(BuildPlugins.androidLibrary)
-    kotlin(BuildPlugins.kotlinAndroid)
-    kotlin(BuildPlugins.kotlinKapt)
+    id(BuildPlugins.ANDROID_LIBRARY)
+    kotlin(BuildPlugins.KOTLIN_ANDROID)
+    kotlin(BuildPlugins.KOTLIN_KAPT)
 }
 
 android {
@@ -11,12 +11,12 @@ android {
 dependencies {
     api(project(":domain"))
 
-    implementation(Libraries.kotlinCoroutines)
-    implementation(Libraries.moshi)
-    implementation(Libraries.moshi_kotlin)
-    implementation(Libraries.moshi_converter)
-    implementation(Libraries.retrofit)
-    implementation(Libraries.okhttp_logging)
-    kapt(Libraries.dagger_compiler)
-    kapt(Libraries.room_compiler)
+    implementation(Libraries.KOTLIN_COROUTINES)
+    implementation(Libraries.MOSHI)
+    implementation(Libraries.MOSHI_KOTLIN)
+    implementation(Libraries.MOSHI_CONVERTER)
+    implementation(Libraries.RETROFIT)
+    implementation(Libraries.OKHTTP_LOGGING)
+    kapt(Libraries.DAGGER_COMPILER)
+    kapt(Libraries.ROOM_COMPILER)
 }

@@ -1,10 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id(BuildPlugins.androidDynamicFeature)
-    kotlin(BuildPlugins.kotlinAndroid)
-    kotlin(BuildPlugins.kotlinAndroidExtensions)
-    kotlin(BuildPlugins.kotlinKapt)
+    id(BuildPlugins.ANDROID_DYNAMIC_FEATURE)
+    kotlin(BuildPlugins.KOTLIN_ANDROID)
+    kotlin(BuildPlugins.KOTLIN_ANDROID_EXTENSIONS)
+    kotlin(BuildPlugins.KOTLIN_KAPT)
 }
 
 android {
@@ -20,5 +20,5 @@ android {
 
 dependencies {
     api(project(":app"))
-    kapt(Libraries.dagger_compiler)
+    kapt(Libraries.DAGGER_COMPILER)
 }

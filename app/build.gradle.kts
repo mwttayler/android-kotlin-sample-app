@@ -1,11 +1,11 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id(BuildPlugins.androidApplication)
-    kotlin(BuildPlugins.kotlinAndroid)
-    kotlin(BuildPlugins.kotlinAndroidExtensions)
-    kotlin(BuildPlugins.kotlinKapt)
-    id(BuildPlugins.safeArgs)
+    id(BuildPlugins.ANDROID_APPLICATION)
+    kotlin(BuildPlugins.KOTLIN_ANDROID)
+    kotlin(BuildPlugins.KOTLIN_ANDROID_EXTENSIONS)
+    kotlin(BuildPlugins.KOTLIN_KAPT)
+    id(BuildPlugins.SAFEARGS)
 }
 
 android {
@@ -41,23 +41,23 @@ android {
 
 dependencies {
     api(project(":data"))
-    api(Libraries.appCompat)
-    api(Libraries.material)
-    api(Libraries.recyclerview)
-    api(Libraries.navigation_fragment_ktx)
-    api(Libraries.navigation_ktx)
-    api(Libraries.lifecycle_extensions)
-    api(Libraries.lifecycle_viewmodel_ktx)
-    api(Libraries.core_ktx)
-    api(Libraries.fragment_ktx)
-    api(Libraries.constraintlayout)
-    api(Libraries.swiperefresh)
-    api(Libraries.timber)
-    api(Libraries.coil)
-    api(Libraries.groupie)
-    api(Libraries.groupie_extensoions)
-    api(Libraries.groupie_databinding)
-    api(Libraries.navigation_dynamic_features)
+    api(Libraries.APPCOMPAT)
+    api(Libraries.MATERIAL)
+    api(Libraries.RECYCLER_VIEW)
+    api(Libraries.NAVIGATION_FRAGMENT_KTX)
+    api(Libraries.NAVIGATION_KTX)
+    api(Libraries.LIFECYCLE_EXTENSIONS)
+    api(Libraries.LIFECYCLE_VIEWMODEL_KTX)
+    api(Libraries.CORE_KTX)
+    api(Libraries.FRAGMENT_KTX)
+    api(Libraries.CONSTRAINT_LAYOUT)
+    api(Libraries.SWIPE_REFRESH)
+    api(Libraries.TIMBER)
+    api(Libraries.COIL)
+    api(Libraries.GROUPIE)
+    api(Libraries.GROUPIE_EXTENSIONS)
+    api(Libraries.GROUPIE_DATABINDING)
+    api(Libraries.NAVIGATION_DYNAMIC_FEATURES)
 
-    kapt(Libraries.dagger_compiler)
+    kapt(Libraries.DAGGER_COMPILER)
 }

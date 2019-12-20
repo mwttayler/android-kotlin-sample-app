@@ -4,9 +4,9 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath(BuildPlugins.kotlinGradlePlugin)
-        classpath(BuildPlugins.androidGradlePlugin)
-        classpath(BuildPlugins.safeArgsGradlePlugin)
+        classpath(BuildPlugins.KOTLIN_GRADLE_PLUGIN)
+        classpath(BuildPlugins.ANDROID_GRADLE_PLUGIN)
+        classpath(BuildPlugins.SAFEARGS_GRADLE_PLUGIN)
     }
 }
 
