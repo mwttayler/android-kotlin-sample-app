@@ -3,11 +3,11 @@ package com.maxtayler.punk.data.di
 import com.maxtayler.punk.data.network.service.PunkApiService
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import javax.inject.Singleton
 
 @Module
 class RetrofitModule {
@@ -24,7 +24,8 @@ class RetrofitModule {
             .build()
     }
 
-    private fun provideOkHttpClient() = OkHttpClient.Builder().addInterceptor(provideOkHttpLogging()).build()
+    private fun provideOkHttpClient() = OkHttpClient.Builder()
+        .addInterceptor(provideOkHttpLogging()).build()
 
     private fun provideOkHttpLogging(): HttpLoggingInterceptor {
         val logging = HttpLoggingInterceptor()

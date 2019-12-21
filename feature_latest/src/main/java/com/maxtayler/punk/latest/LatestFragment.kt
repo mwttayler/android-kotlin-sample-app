@@ -14,8 +14,8 @@ import com.maxtayler.punk.groupie.BeerItem
 import com.maxtayler.punk.latest.di.DaggerLatestComponent
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
-import kotlinx.android.synthetic.main.fragment_latest.*
 import javax.inject.Inject
+import kotlinx.android.synthetic.main.fragment_latest.*
 
 class LatestFragment : BaseFragment() {
 

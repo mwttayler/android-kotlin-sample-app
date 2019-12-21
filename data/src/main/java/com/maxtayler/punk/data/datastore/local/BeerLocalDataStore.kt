@@ -2,8 +2,8 @@ package com.maxtayler.punk.data.datastore.local
 
 import com.maxtayler.punk.data.datastore.BeerDataStore
 import com.maxtayler.punk.domain.entity.BeerEntity
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
+import kotlinx.coroutines.flow.Flow
 
 internal class BeerLocalDataStore @Inject constructor(
     private val database: BeerDatabase

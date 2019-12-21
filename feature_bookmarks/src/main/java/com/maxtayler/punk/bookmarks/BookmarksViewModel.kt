@@ -7,9 +7,9 @@ import androidx.lifecycle.viewModelScope
 import com.maxtayler.punk.domain.entity.BeerEntity
 import com.maxtayler.punk.domain.usecase.GetBookmarksUseCase
 import com.maxtayler.punk.domain.usecase.ToggleBookmarkUseCase
+import javax.inject.Inject
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 class BookmarksViewModel @Inject constructor(
     private val getBookmarks: GetBookmarksUseCase,

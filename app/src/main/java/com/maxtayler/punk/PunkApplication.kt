@@ -8,7 +8,9 @@ import timber.log.Timber
 
 class PunkApplication : Application() {
 
-    private val singletonComponent: SingletonComponent by lazy { DaggerSingletonComponent.factory().create(this) }
+    private val singletonComponent: SingletonComponent by lazy {
+        DaggerSingletonComponent.factory().create(this)
+    }
 
     override fun onCreate() {
         super.onCreate()

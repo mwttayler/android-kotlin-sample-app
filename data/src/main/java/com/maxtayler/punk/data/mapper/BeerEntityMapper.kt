@@ -4,7 +4,8 @@ import com.maxtayler.punk.data.network.model.BeerResponse
 import com.maxtayler.punk.domain.entity.BeerEntity
 import javax.inject.Inject
 
-internal class BeerEntityMapper @Inject constructor() : Mapper<BeerEntityMapper.Params, BeerEntity>() {
+internal class BeerEntityMapper @Inject constructor() :
+    Mapper<BeerEntityMapper.Params, BeerEntity>() {
 
     override fun mapFrom(from: Params): BeerEntity {
         return BeerEntity(

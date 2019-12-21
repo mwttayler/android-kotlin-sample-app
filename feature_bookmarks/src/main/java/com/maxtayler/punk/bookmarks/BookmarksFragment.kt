@@ -14,8 +14,8 @@ import com.maxtayler.punk.domain.entity.BeerEntity
 import com.maxtayler.punk.groupie.BeerItem
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
-import kotlinx.android.synthetic.main.fragment_bookmarks.*
 import javax.inject.Inject
+import kotlinx.android.synthetic.main.fragment_bookmarks.*
 
 class BookmarksFragment : BaseFragment() {
 
