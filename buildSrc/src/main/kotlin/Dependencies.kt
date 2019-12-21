@@ -47,6 +47,7 @@ object Libraries {
         const val COIL = "0.8.0"
         const val LOGGING = "4.2.2"
         const val GROUPIE = "2.7.0"
+        const val KTLINT_VERSION = "0.36.0"
     }
 
     const val KOTLIN_STDLIB = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${KOTLIN_VERSION}"
@@ -87,6 +88,8 @@ object Libraries {
     const val MOSHI_CONVERTER = "com.squareup.retrofit2:converter-moshi:${Versions.MOSHI_CONVERTER}"
     const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
     const val OKHTTP_LOGGING = "com.squareup.okhttp3:logging-interceptor:${Versions.LOGGING}"
+
+    const val KTLINT = "com.pinterest:ktlint:${Versions.KTLINT_VERSION}"
 }
 
 object TestLibraries {
