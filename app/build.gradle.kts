@@ -1,11 +1,11 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    kotlin("android.extensions")
-    kotlin("kapt")
-    id("androidx.navigation.safeargs.kotlin")
+    id(BuildPlugins.ANDROID_APPLICATION)
+    kotlin(BuildPlugins.KOTLIN_ANDROID)
+    kotlin(BuildPlugins.KOTLIN_ANDROID_EXTENSIONS)
+    kotlin(BuildPlugins.KOTLIN_KAPT)
+    id(BuildPlugins.SAFEARGS)
 }
 
 android {
@@ -41,23 +41,23 @@ android {
 
 dependencies {
     api(project(":data"))
-    api("androidx.appcompat:appcompat:${DependencyVersions.APP_COMPAT}")
-    api("com.google.android.material:material:${DependencyVersions.MATERIAL}")
-    api("androidx.recyclerview:recyclerview:${DependencyVersions.RECYCLER_VIEW}")
-    api("androidx.navigation:navigation-fragment-ktx:${DependencyVersions.NAVIGATION}")
-    api("androidx.navigation:navigation-ui-ktx:${DependencyVersions.NAVIGATION}")
-    api("androidx.lifecycle:lifecycle-extensions:${DependencyVersions.LIFECYCLE}")
-    api("androidx.lifecycle:lifecycle-viewmodel-ktx:${DependencyVersions.LIFECYCLE}")
-    api("androidx.core:core-ktx:${DependencyVersions.CORE_KTX}")
-    api("androidx.fragment:fragment-ktx:${DependencyVersions.FRAGMENT_KTX}")
-    api("androidx.constraintlayout:constraintlayout:${DependencyVersions.CONSTRAINT_LAYOUT}")
-    api("androidx.swiperefreshlayout:swiperefreshlayout:${DependencyVersions.SWIPE_REFRESH_LAYOUT}")
-    api("com.jakewharton.timber:timber:${DependencyVersions.TIMBER}")
-    api("io.coil-kt:coil:${DependencyVersions.COIL}")
-    api("com.xwray:groupie:${DependencyVersions.GROUPIE}")
-    api("com.xwray:groupie-kotlin-android-extensions:${DependencyVersions.GROUPIE}")
-    api("com.xwray:groupie-databinding:${DependencyVersions.GROUPIE}")
-    api("androidx.navigation:navigation-dynamic-features-fragment:2.3.0-SNAPSHOT")
+    api(Libraries.APPCOMPAT)
+    api(Libraries.MATERIAL)
+    api(Libraries.RECYCLER_VIEW)
+    api(Libraries.NAVIGATION_FRAGMENT_KTX)
+    api(Libraries.NAVIGATION_KTX)
+    api(Libraries.LIFECYCLE_EXTENSIONS)
+    api(Libraries.LIFECYCLE_VIEWMODEL_KTX)
+    api(Libraries.CORE_KTX)
+    api(Libraries.FRAGMENT_KTX)
+    api(Libraries.CONSTRAINT_LAYOUT)
+    api(Libraries.SWIPE_REFRESH)
+    api(Libraries.TIMBER)
+    api(Libraries.COIL)
+    api(Libraries.GROUPIE)
+    api(Libraries.GROUPIE_EXTENSIONS)
+    api(Libraries.GROUPIE_DATABINDING)
+    api(Libraries.NAVIGATION_DYNAMIC_FEATURES)
 
-    kapt("com.google.dagger:dagger-compiler:${DependencyVersions.DAGGER}")
+    kapt(Libraries.DAGGER_COMPILER)
 }

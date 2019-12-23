@@ -1,7 +1,7 @@
 plugins {
-    id("com.android.library")
-    kotlin("android")
-    kotlin("kapt")
+    id(BuildPlugins.ANDROID_LIBRARY)
+    kotlin(BuildPlugins.KOTLIN_ANDROID)
+    kotlin(BuildPlugins.KOTLIN_KAPT)
 }
 
 android {
@@ -11,13 +11,12 @@ android {
 dependencies {
     api(project(":domain"))
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${DependencyVersions.COROUTINES}")
-    implementation("com.squareup.moshi:moshi:${DependencyVersions.MOSHI}")
-    implementation("com.squareup.moshi:moshi-kotlin:${DependencyVersions.MOSHI}")
-    implementation("com.squareup.retrofit2:converter-moshi:${DependencyVersions.MOSHI_CONVERTER}")
-    implementation("com.squareup.retrofit2:retrofit:${DependencyVersions.RETROFIT}")
-    implementation("com.squareup.okhttp3:logging-interceptor:${DependencyVersions.LOGGING}")
-
-    kapt("com.google.dagger:dagger-compiler:${DependencyVersions.DAGGER}")
-    kapt("androidx.room:room-compiler:${DependencyVersions.ROOM}")
+    implementation(Libraries.KOTLIN_COROUTINES)
+    implementation(Libraries.MOSHI)
+    implementation(Libraries.MOSHI_KOTLIN)
+    implementation(Libraries.MOSHI_CONVERTER)
+    implementation(Libraries.RETROFIT)
+    implementation(Libraries.OKHTTP_LOGGING)
+    kapt(Libraries.DAGGER_COMPILER)
+    kapt(Libraries.ROOM_COMPILER)
 }

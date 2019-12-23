@@ -3,8 +3,8 @@ plugins {
 }
 
 dependencies {
-    api("org.jetbrains.kotlin:kotlin-stdlib-jdk7:${DependencyVersions.KOTLIN}")
-    api("com.google.dagger:dagger:${DependencyVersions.DAGGER}")
-    api("androidx.room:room-runtime:${DependencyVersions.ROOM}")
-    api("androidx.room:room-ktx:${DependencyVersions.ROOM}")
+    api(Libraries.KOTLIN_STDLIB)
+    api(Libraries.DAGGER)
+    api(Libraries.ROOM_RUNTIME)
+    api(Libraries.ROOM_KTX)
 }
