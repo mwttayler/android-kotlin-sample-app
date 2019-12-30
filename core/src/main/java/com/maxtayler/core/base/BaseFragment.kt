@@ -1,4 +1,4 @@
-package com.maxtayler.punk.base
+package com.maxtayler.core.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

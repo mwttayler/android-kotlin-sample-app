@@ -6,10 +6,10 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
-import com.maxtayler.punk.PunkApplication.Companion.singletonComponent
-import com.maxtayler.punk.base.BaseFragment
+import com.maxtayler.core.CoreApplication.Companion.singletonComponent
+import com.maxtayler.core.base.BaseFragment
+import com.maxtayler.core.di.viewmodel.ViewModelFactory
 import com.maxtayler.punk.details.di.DaggerDetailsComponent
-import com.maxtayler.punk.di.viewmodel.ViewModelFactory
 import com.maxtayler.punk.domain.entity.BeerEntity
 import kotlinx.android.synthetic.main.fragment_details.*
 import javax.inject.Inject

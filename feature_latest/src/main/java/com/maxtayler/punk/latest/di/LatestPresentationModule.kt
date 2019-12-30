@@ -1,7 +1,7 @@
 package com.maxtayler.punk.latest.di
 
 import androidx.lifecycle.ViewModel
-import com.maxtayler.punk.di.viewmodel.ViewModelKey
+import com.maxtayler.core.di.viewmodel.ViewModelKey
 import com.maxtayler.punk.latest.LatestViewModel
 import dagger.Binds
 import dagger.Module

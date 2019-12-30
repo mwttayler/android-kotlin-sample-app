@@ -1,4 +1,4 @@
-package com.maxtayler.punk.di.viewmodel
+package com.maxtayler.core.di.viewmodel
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

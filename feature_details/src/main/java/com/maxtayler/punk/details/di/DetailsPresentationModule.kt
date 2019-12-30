@@ -2,7 +2,7 @@ package com.maxtayler.punk.details.di
 
 import androidx.lifecycle.ViewModel
 import com.maxtayler.punk.details.DetailsViewModel
-import com.maxtayler.punk.di.viewmodel.ViewModelKey
+import com.maxtayler.core.di.viewmodel.ViewModelKey
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

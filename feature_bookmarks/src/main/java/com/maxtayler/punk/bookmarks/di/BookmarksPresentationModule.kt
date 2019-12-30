@@ -1,8 +1,8 @@
 package com.maxtayler.punk.bookmarks.di
 
 import androidx.lifecycle.ViewModel
+import com.maxtayler.core.di.viewmodel.ViewModelKey
 import com.maxtayler.punk.bookmarks.BookmarksViewModel
-import com.maxtayler.punk.di.viewmodel.ViewModelKey
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

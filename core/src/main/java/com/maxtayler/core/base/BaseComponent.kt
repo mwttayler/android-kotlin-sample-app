@@ -1,4 +1,4 @@
-package com.maxtayler.punk.base
+package com.maxtayler.core.base
 
 interface BaseComponent<T> {
 

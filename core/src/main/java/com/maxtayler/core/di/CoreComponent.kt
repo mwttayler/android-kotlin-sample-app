@@ -1,4 +1,4 @@
-package com.maxtayler.punk.di
+package com.maxtayler.core.di
 
 import android.content.Context
 import com.maxtayler.punk.data.di.BeerDataModule
@@ -13,13 +13,13 @@ import javax.inject.Singleton
         BeerDataModule::class
     ]
 )
-interface SingletonComponent {
+interface CoreComponent {
 
     fun exposeBeerRepository(): BeerRepository
 
     @Component.Factory
     interface Factory {
 
-        fun create(@BindsInstance context: Context): SingletonComponent
+        fun create(@BindsInstance context: Context): CoreComponent
     }
 }

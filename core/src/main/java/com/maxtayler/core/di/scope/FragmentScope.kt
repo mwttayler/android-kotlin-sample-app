@@ -1,4 +1,4 @@
-package com.maxtayler.punk.di.scope
+package com.maxtayler.core.di.scope
 
 import javax.inject.Scope
 
