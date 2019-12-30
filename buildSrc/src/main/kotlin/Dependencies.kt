@@ -1,7 +1,7 @@
 const val KOTLIN_VERSION = "1.3.50"
 
 object BuildPlugins {
-    object Versions {
+    private object Versions {
         const val ANDROID_BUILD_TOOLS = "3.5.3"
         const val SAFE_ARGS = "2.1.0"
     }
