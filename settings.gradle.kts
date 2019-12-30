@@ -1,7 +1,8 @@
 include(
     ":app",
-    ":data",
-    ":domain",
+    ":core",
+    ":core-data",
+    ":core-domain",
     ":feature_latest",
     ":feature_bookmarks",
     ":feature_details"

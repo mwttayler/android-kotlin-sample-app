@@ -40,24 +40,6 @@ android {
 }
 
 dependencies {
-    api(project(":data"))
-    api(Libraries.APPCOMPAT)
-    api(Libraries.MATERIAL)
-    api(Libraries.RECYCLER_VIEW)
-    api(Libraries.NAVIGATION_FRAGMENT_KTX)
-    api(Libraries.NAVIGATION_KTX)
-    api(Libraries.LIFECYCLE_EXTENSIONS)
-    api(Libraries.LIFECYCLE_VIEWMODEL_KTX)
-    api(Libraries.CORE_KTX)
-    api(Libraries.FRAGMENT_KTX)
-    api(Libraries.CONSTRAINT_LAYOUT)
-    api(Libraries.SWIPE_REFRESH)
-    api(Libraries.TIMBER)
-    api(Libraries.COIL)
-    api(Libraries.GROUPIE)
-    api(Libraries.GROUPIE_EXTENSIONS)
-    api(Libraries.GROUPIE_DATABINDING)
-    api(Libraries.NAVIGATION_DYNAMIC_FEATURES)
-
+    api(project(":core"))
     kapt(Libraries.DAGGER_COMPILER)
 }
