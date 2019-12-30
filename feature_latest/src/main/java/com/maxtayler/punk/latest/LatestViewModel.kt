@@ -7,9 +7,9 @@ import androidx.lifecycle.viewModelScope
 import com.maxtayler.punk.domain.entity.BeerEntity
 import com.maxtayler.punk.domain.usecase.GetBeersUseCase
 import com.maxtayler.punk.domain.usecase.ToggleBookmarkUseCase
+import javax.inject.Inject
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 class LatestViewModel @Inject constructor(
     private val getBeers: GetBeersUseCase,

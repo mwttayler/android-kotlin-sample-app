@@ -4,9 +4,9 @@ import com.maxtayler.punk.data.datastore.BeerDataStore
 import com.maxtayler.punk.data.mapper.BeerEntityMapper
 import com.maxtayler.punk.domain.entity.BeerEntity
 import com.maxtayler.punk.domain.repository.BeerRepository
+import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import javax.inject.Inject
 
 internal class BeerRepositoryImpl @Inject constructor(
     private val local: BeerDataStore.Local,
