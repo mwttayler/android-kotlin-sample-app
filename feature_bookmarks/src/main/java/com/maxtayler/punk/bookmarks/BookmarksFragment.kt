@@ -6,9 +6,11 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.maxtayler.punk.PunkApplication.Companion.singletonComponent
 import com.maxtayler.punk.base.BaseFragment
 import com.maxtayler.punk.bookmarks.di.DaggerBookmarksComponent
+import com.maxtayler.punk.bookmarks.viewstate.ViewState
 import com.maxtayler.punk.di.viewmodel.ViewModelFactory
 import com.maxtayler.punk.domain.entity.BeerEntity
 import com.maxtayler.punk.groupie.BeerItem
@@ -48,14 +50,41 @@ class BookmarksFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recycler_view.adapter = groupAdapter
+        initViews()
 
-        viewModel.bookmarks.observe(viewLifecycleOwner, Observer(::renderBookmarks))
-        viewModel.load()
+        viewModel.viewState.observe(viewLifecycleOwner, Observer(::renderViewState))
+        viewModel.onViewCreated()
+    }
+
+    private fun initViews() {
+        recycler_view.adapter = groupAdapter
+        swipe_refresh_layout.isEnabled = false
+    }
+
+    private fun renderViewState(viewState: ViewState) {
+        when (viewState) {
+            is ViewState.Loading -> renderLoading()
+            is ViewState.Success -> renderBookmarks(viewState.bookmarks)
+            is ViewState.Error -> renderError(viewState.throwable)
+        }
+    }
+
+    private fun renderLoading() {
+        swipe_refresh_layout.isRefreshing = true
     }
 
     private fun renderBookmarks(bookmarks: List<BeerEntity>) {
+        swipe_refresh_layout.isRefreshing = false
+
         val items = bookmarks.map { BeerItem(it, viewModel::onBookmarkClicked) }
         groupAdapter.update(items)
+    }
+
+    private fun renderError(throwable: Throwable) {
+        swipe_refresh_layout.isRefreshing = false
+
+        throwable.message?.run {
+            Snackbar.make(coordinator, this, Snackbar.LENGTH_SHORT).show()
+        }
     }
 }
