@@ -33,7 +33,7 @@ object Libraries {
         const val COROUTINES = "1.3.2"
         const val ROOM = "2.2.2"
         const val RECYCLER_VIEW_VERSION = "1.1.0-alpha06"
-        const val NAVIGATION = "2.1.0"
+        const val NAVIGATION = "2.3.0"
         const val LIFECYCLE = "2.1.0"
         const val CORE_KTX = "1.1.0"
         const val FRAGMENT_KTX = "1.2.0-alpha02"
@@ -60,7 +60,7 @@ object Libraries {
 
     const val NAVIGATION_FRAGMENT_KTX = "androidx.navigation:navigation-fragment-ktx:${Versions.NAVIGATION}"
     const val NAVIGATION_KTX = "androidx.navigation:navigation-ui-ktx:${Versions.NAVIGATION}"
-    const val NAVIGATION_DYNAMIC_FEATURES = "androidx.navigation:navigation-dynamic-features-fragment:2.3.0-SNAPSHOT"
+    const val NAVIGATION_DYNAMIC_FEATURES = "androidx.navigation:navigation-dynamic-features-fragment:${Versions.NAVIGATION}"
 
     const val LIFECYCLE_EXTENSIONS = "androidx.lifecycle:lifecycle-extensions:${Versions.LIFECYCLE}"
     const val LIFECYCLE_VIEWMODEL_KTX = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE}"
