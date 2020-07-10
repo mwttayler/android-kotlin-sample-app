@@ -25,9 +25,9 @@ android {
         }
     }
     dynamicFeatures = mutableSetOf(
-        ":feature_latest",
-        ":feature_bookmarks",
-        ":feature_details"
+        ":features:latest",
+        ":features:bookmarks",
+        ":features:details"
     )
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -40,7 +40,7 @@ android {
 }
 
 dependencies {
-    api(project(":data"))
+    api(project(":core:data"))
     api(Libraries.APPCOMPAT)
     api(Libraries.MATERIAL)
     api(Libraries.RECYCLER_VIEW)

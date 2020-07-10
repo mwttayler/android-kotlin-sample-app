@@ -9,7 +9,7 @@ android {
 }
 
 dependencies {
-    api(project(":domain"))
+    api(project(":core:domain"))
 
     implementation(Libraries.KOTLIN_COROUTINES)
     implementation(Libraries.MOSHI)

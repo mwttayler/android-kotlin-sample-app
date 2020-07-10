@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/menu_latest"
         android:name="com.maxtayler.punk.latest.LatestFragment"
-        app:moduleName="feature_latest">
+        app:moduleName="latest">
         <action
             android:id="@+id/action_latest_to_details"
             app:destination="@id/menu_details">
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/menu_bookmarks"
         android:name="com.maxtayler.punk.bookmarks.BookmarksFragment"
-        app:moduleName="feature_bookmarks">
+        app:moduleName="bookmarks">
         <action
             android:id="@+id/action_bookmarks_to_details"
             app:destination="@id/menu_details">
@@ -33,7 +33,7 @@
     <fragment
         android:id="@+id/menu_details"
         android:name="com.maxtayler.punk.details.DetailsFragment"
-        app:moduleName="feature_details">
+        app:moduleName="details">
         <argument
             android:name="beer_id"
             app:argType="long" />
