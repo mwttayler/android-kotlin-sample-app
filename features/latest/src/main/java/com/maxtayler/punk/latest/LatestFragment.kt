@@ -19,7 +19,7 @@ import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import javax.inject.Inject
 import kotlinx.android.synthetic.main.fragment_latest.*
 
-class LatestFragment : BaseFragment() {
+class LatestFragment : BaseFragment(R.layout.fragment_latest) {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
@@ -35,10 +35,6 @@ class LatestFragment : BaseFragment() {
                 )
             }
         }
-    }
-
-    override fun provideLayoutId(): Int {
-        return R.layout.fragment_latest
     }
 
     override fun onAttach(context: Context) {

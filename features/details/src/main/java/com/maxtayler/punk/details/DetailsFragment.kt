@@ -14,17 +14,13 @@ import com.maxtayler.punk.domain.entity.BeerEntity
 import kotlinx.android.synthetic.main.fragment_details.*
 import javax.inject.Inject
 
-class DetailsFragment : BaseFragment() {
+class DetailsFragment : BaseFragment(R.layout.fragment_details) {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
 
     private val viewModel: DetailsViewModel by viewModels { viewModelFactory }
     private val args: DetailsFragmentArgs by navArgs()
-
-    override fun provideLayoutId(): Int {
-        return R.layout.fragment_details
-    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)

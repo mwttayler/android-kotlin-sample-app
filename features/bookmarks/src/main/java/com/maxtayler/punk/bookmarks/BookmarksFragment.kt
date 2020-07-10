@@ -19,7 +19,7 @@ import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import javax.inject.Inject
 import kotlinx.android.synthetic.main.fragment_bookmarks.*
 
-class BookmarksFragment : BaseFragment() {
+class BookmarksFragment : BaseFragment(R.layout.fragment_bookmarks) {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
@@ -35,10 +35,6 @@ class BookmarksFragment : BaseFragment() {
                 )
             }
         }
-    }
-
-    override fun provideLayoutId(): Int {
-        return R.layout.fragment_bookmarks
     }
 
     override fun onAttach(context: Context) {
