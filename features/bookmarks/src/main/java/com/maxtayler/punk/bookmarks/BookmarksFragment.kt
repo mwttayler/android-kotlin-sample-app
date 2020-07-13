@@ -1,24 +1,23 @@
 package com.maxtayler.punk.bookmarks
 
-import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
-import com.maxtayler.punk.PunkApplication.Companion.singletonComponent
 import com.maxtayler.punk.base.BaseFragment
-import com.maxtayler.punk.bookmarks.di.DaggerBookmarksComponent
 import com.maxtayler.punk.bookmarks.viewstate.ViewState
 import com.maxtayler.punk.di.viewmodel.ViewModelFactory
 import com.maxtayler.punk.domain.entity.BeerEntity
 import com.maxtayler.punk.groupie.BeerItem
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import kotlinx.android.synthetic.main.fragment_bookmarks.*
 
+@AndroidEntryPoint
 class BookmarksFragment : BaseFragment(R.layout.fragment_bookmarks) {
 
     @Inject
@@ -35,13 +34,6 @@ class BookmarksFragment : BaseFragment(R.layout.fragment_bookmarks) {
                 )
             }
         }
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        DaggerBookmarksComponent.factory()
-            .create(context.singletonComponent)
-            .inject(this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -5,6 +5,7 @@ plugins {
     kotlin(BuildPlugins.KOTLIN_ANDROID)
     kotlin(BuildPlugins.KOTLIN_ANDROID_EXTENSIONS)
     kotlin(BuildPlugins.KOTLIN_KAPT)
+    id(BuildPlugins.DAGGER_HILT)
 }
 
 android {
@@ -20,5 +21,6 @@ android {
 
 dependencies {
     api(project(":app"))
+    implementation(Libraries.DAGGER)
     kapt(Libraries.DAGGER_COMPILER)
 }

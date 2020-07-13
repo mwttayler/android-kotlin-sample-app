@@ -3,6 +3,8 @@ package com.maxtayler.punk.data.di
 import com.maxtayler.punk.data.network.service.PunkApiService
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.FragmentComponent
 import javax.inject.Singleton
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -10,6 +12,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 @Module
+@InstallIn(FragmentComponent::class)
 class RetrofitModule {
 
     @Provides

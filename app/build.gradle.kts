@@ -5,6 +5,7 @@ plugins {
     kotlin(BuildPlugins.KOTLIN_ANDROID)
     kotlin(BuildPlugins.KOTLIN_ANDROID_EXTENSIONS)
     kotlin(BuildPlugins.KOTLIN_KAPT)
+    id(BuildPlugins.DAGGER_HILT)
     id(BuildPlugins.SAFEARGS)
 }
 
@@ -58,6 +59,7 @@ dependencies {
     api(Libraries.GROUPIE_EXTENSIONS)
     api(Libraries.GROUPIE_DATABINDING)
     api(Libraries.NAVIGATION_DYNAMIC_FEATURES)
+    implementation(Libraries.DAGGER)
 
     kapt(Libraries.DAGGER_COMPILER)
 }

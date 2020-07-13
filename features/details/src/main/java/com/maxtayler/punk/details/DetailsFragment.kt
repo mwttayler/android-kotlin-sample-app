@@ -1,19 +1,18 @@
 package com.maxtayler.punk.details
 
-import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
-import com.maxtayler.punk.PunkApplication.Companion.singletonComponent
 import com.maxtayler.punk.base.BaseFragment
-import com.maxtayler.punk.details.di.DaggerDetailsComponent
 import com.maxtayler.punk.di.viewmodel.ViewModelFactory
 import com.maxtayler.punk.domain.entity.BeerEntity
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_details.*
 import javax.inject.Inject
 
+@AndroidEntryPoint
 class DetailsFragment : BaseFragment(R.layout.fragment_details) {
 
     @Inject
@@ -21,13 +20,6 @@ class DetailsFragment : BaseFragment(R.layout.fragment_details) {
 
     private val viewModel: DetailsViewModel by viewModels { viewModelFactory }
     private val args: DetailsFragmentArgs by navArgs()
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        DaggerDetailsComponent.factory()
-            .create(context.singletonComponent)
-            .inject(this)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

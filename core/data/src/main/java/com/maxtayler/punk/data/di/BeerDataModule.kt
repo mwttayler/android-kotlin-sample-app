@@ -7,9 +7,12 @@ import com.maxtayler.punk.data.repository.BeerRepositoryImpl
 import com.maxtayler.punk.domain.repository.BeerRepository
 import dagger.Binds
 import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.FragmentComponent
 import javax.inject.Singleton
 
 @Module(includes = [DatabaseModule::class, RetrofitModule::class])
+@InstallIn(FragmentComponent::class)
 abstract class BeerDataModule {
 
     @Binds

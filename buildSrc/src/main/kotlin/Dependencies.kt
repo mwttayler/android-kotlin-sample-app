@@ -17,6 +17,7 @@ object BuildPlugins {
     const val KOTLIN_ANDROID = "android"
     const val KOTLIN_ANDROID_EXTENSIONS = "android.extensions"
     const val KOTLIN_KAPT = "kapt"
+    const val DAGGER_HILT = "dagger.hilt.android.plugin"
 }
 
 object AndroidConfig {
@@ -39,7 +40,7 @@ object Libraries {
         const val FRAGMENT_KTX = "1.2.0-alpha02"
         const val CONSTRAINT_LAYOUT_VERSION = "1.1.3"
         const val SWIPE_REFRESH_LAYOUT = "1.1.0-alpha02"
-        const val DAGGER = "2.24"
+        const val DAGGER = "2.28-alpha"
         const val TIMBER = "4.7.1"
         const val RETROFIT = "2.6.2"
         const val MOSHI = "1.8.0"
@@ -76,8 +77,8 @@ object Libraries {
     const val GROUPIE_EXTENSIONS = "com.xwray:groupie-kotlin-android-extensions:${Versions.GROUPIE}"
     const val GROUPIE_DATABINDING = "com.xwray:groupie-databinding:${Versions.GROUPIE}"
 
-    const val DAGGER_COMPILER = "com.google.dagger:dagger-compiler:${Versions.DAGGER}"
-    const val DAGGER = "com.google.dagger:dagger:${Versions.DAGGER}"
+    const val DAGGER_COMPILER = "com.google.dagger:hilt-android-compiler:${Versions.DAGGER}"
+    const val DAGGER = "com.google.dagger:hilt-android:${Versions.DAGGER}"
 
     const val ROOM_RUNTIME = "androidx.room:room-runtime:${Versions.ROOM}"
     const val ROOM_KTX = "androidx.room:room-ktx:${Versions.ROOM}"
