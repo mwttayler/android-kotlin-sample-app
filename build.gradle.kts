@@ -7,7 +7,6 @@ buildscript {
         classpath(BuildPlugins.KOTLIN_GRADLE_PLUGIN)
         classpath(BuildPlugins.ANDROID_GRADLE_PLUGIN)
         classpath(BuildPlugins.SAFEARGS_GRADLE_PLUGIN)
-        classpath("com.google.dagger:hilt-android-gradle-plugin:2.28-alpha")
     }
 }
 
