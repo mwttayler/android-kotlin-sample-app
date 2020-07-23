@@ -9,5 +9,6 @@ data class BeerEntity(
     val title: String,
     val imageUrl: String,
     val tagLine: String,
+    val description: String,
     val isBookmarked: Boolean
 )

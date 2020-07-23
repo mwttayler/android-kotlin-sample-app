@@ -13,6 +13,7 @@ internal class BeerEntityMapper @Inject constructor() :
             from.response.name.orEmpty(),
             from.response.image_url.orEmpty(),
             from.response.tagline.orEmpty(),
+            from.response.description.orEmpty(),
             from.bookmarks.any { it.id == from.response.id }
         )
     }

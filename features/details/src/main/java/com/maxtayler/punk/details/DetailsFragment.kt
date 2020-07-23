@@ -1,11 +1,14 @@
 package com.maxtayler.punk.details
 
+import com.maxtayler.punk.R as appR
 import android.content.Context
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
+import coil.api.load
 import com.maxtayler.punk.PunkApplication.Companion.singletonComponent
 import com.maxtayler.punk.base.BaseFragment
 import com.maxtayler.punk.details.di.DaggerDetailsComponent
@@ -33,9 +36,15 @@ class DetailsFragment : BaseFragment(R.layout.fragment_details) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.beer.observe(viewLifecycleOwner, Observer(::renderBeer))
         viewModel.load(args.beerId)
+
+        toolbar.navigationIcon = ContextCompat.getDrawable(requireContext(), appR.drawable.ic_back)
+        toolbar.setNavigationOnClickListener { requireActivity().onBackPressed() }
     }
 
     private fun renderBeer(beer: BeerEntity) {
-        title.text = "beer = ${beer.title}"
+        toolbar.title = beer.title
+        image.load(beer.imageUrl)
+        tag_line.text = beer.tagLine
+        description.text = beer.description
     }
 }

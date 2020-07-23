@@ -10,7 +10,11 @@
         app:moduleName="latest">
         <action
             android:id="@+id/action_latest_to_details"
-            app:destination="@id/menu_details">
+            app:destination="@id/menu_details"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit">
             <argument
                 android:name="beer_id"
                 app:argType="long" />
@@ -23,7 +27,11 @@
         app:moduleName="bookmarks">
         <action
             android:id="@+id/action_bookmarks_to_details"
-            app:destination="@id/menu_details">
+            app:destination="@id/menu_details"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit">
             <argument
                 android:name="beer_id"
                 app:argType="long" />
